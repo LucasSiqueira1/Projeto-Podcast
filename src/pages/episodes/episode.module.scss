@@ -1,0 +1,93 @@
+.episode {
+    max-width: 45rem; // 720 / 16 
+    padding: 3rem 2rem;
+    margin: 0 auto; //* Centralizar o conteudo
+
+    .thumbnailContainer {
+        position: relative;
+
+        img {
+            border-radius: 1rem;
+        }
+
+        button {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 0.75rem;
+            border: 0;
+            position: absolute;
+            z-index: 5;
+            font-size: 0;
+
+            transition: filter 0.4s;
+
+            &:first-child {
+                left: 0;
+                top: 50%;
+                background-color: var(--roxo-500);
+
+                /*Botão no centro */
+                transform: translate(-50%, -50%);
+            }
+
+            &:last-child {
+                right: 0;
+                top: 50%;
+                background-color: var(--verde-500);
+
+                /* Botão no centro*/
+                transform: translate(50%, -50%);
+            }
+
+
+            &:hover {
+                filter: brightness(0.9);
+            }
+        }
+    }
+
+    header {
+        padding-bottom: 1rem;
+        border-bottom: 1px solid var(--cinza-100);
+
+        h1 {
+            margin-top: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        span {
+            display: inline-block;
+            font-size: 0.875rem;
+
+            /* Vai pegar todo span que antes dele ( & ) tem outro span */
+            &+span {
+                margin-left: 1rem;
+                padding-left: 1rem;
+                position: relative;
+
+                &::before {
+                    /* Add um elemento (BOLINHA) que ta antes do span que é o ultimo child, mais facil pois tem varios elementos na frente do span*/
+                    content: "";
+                    width: 4px;
+                    height: 4px;
+                    border-radius: 2px;
+                    background-color: #DDD;
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
+    }
+
+    .description {
+        margin-top: 2rem;
+        line-height: 1.675rem;
+        color: var(--cinza-800);
+
+        p {
+            margin: 1.5rem 0;
+        }
+    }
+}
