@@ -1,4 +1,4 @@
-\ueff t-Next, Desenvolvido com base em React, especificamente com Next, usando TypeScript, SCSS, etc.
+Podcastt-Next, Desenvolvido com base em React, especificamente com Next, usando TypeScript, SCSS, etc.
 #
 # Para Rodar o Projeto:
 #
